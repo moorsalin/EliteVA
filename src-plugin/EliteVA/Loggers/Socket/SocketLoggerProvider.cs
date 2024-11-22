@@ -7,7 +7,7 @@ namespace EliteVA.Loggers.Socket;
 public class SocketLoggerProvider : ILoggerProvider
 {
     private readonly WatsonWsServer _server;
-    private int _basePort = 51556;
+    private int _basePort = 58888;
     private int _maxRetries = 10;
 
     public SocketLoggerProvider()
