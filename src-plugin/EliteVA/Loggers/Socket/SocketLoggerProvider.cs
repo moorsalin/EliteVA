@@ -22,7 +22,7 @@ public class SocketLoggerProvider : ILoggerProvider
                     Console.WriteLine($"Server started successfully on port {currentPort}");
                     return;
                 }
-                catch (Exception ex) when (ex is System.Net.Sockets.SocketException || ex is System.IO.IOException)
+                catch (Exception ex) when (ex is System.Net.Sockets.SocketException || ex is System.Net.HttpListenerException)
                 {
                     Console.WriteLine($"Port {_basePort + attempt} is in use. Trying next port...");
                 }
